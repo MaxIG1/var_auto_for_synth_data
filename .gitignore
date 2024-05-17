@@ -77,7 +77,10 @@ target/
 
 # exclude data from source control by default
 /data/
-
+# exclude Archive from source control by default
+# exclude the pip env
+/notebooks/var_auto_pip
+/notebooks/Archive/
 # Mac OS-specific storage files
 .DS_Store
 
