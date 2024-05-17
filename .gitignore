@@ -77,10 +77,11 @@ target/
 
 # exclude data from source control by default
 /data/
-# exclude Archive from source control by default
-# exclude the pip env
+# exclude other folders and stuff I dont want uploaded
 /notebooks/var_auto_pip
 /notebooks/Archive/
+/notebooks/Base_updated_data_privacy_test.ipynb
+/var_auto_working.iypnb
 # Mac OS-specific storage files
 .DS_Store
 
