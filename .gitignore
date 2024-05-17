@@ -81,7 +81,7 @@ target/
 /notebooks/var_auto_pip
 /notebooks/Archive/
 /notebooks/Base_updated_data_privacy_test.ipynb
-/var_auto_working.iypnb
+var_auto_working.ipynb
 # Mac OS-specific storage files
 .DS_Store
 
