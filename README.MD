@@ -33,16 +33,26 @@ Usage
 
 # Usage
 
-Data Preparation: Refer to data_preparation.ipynb for steps involved in data preprocessing and preparation.
-Model Training: Utilize notebook Base_updated_data.ipynb or CGAN_Approach.ipynb for training VAE and CGAN models, respectively.
-Hyper Paramter Training: Use the VAE_hyper_parameter_search.ipynb for further hyper paramter tuning using the Tensorboard.
-start the Tensorboard with logs with 
-```plaintext 
+## Data Preparation: 
+Refer to data_preparation.ipynb for steps involved in data preprocessing and preparation.
+## Model Training: 
+Utilize notebook Base_updated_data.ipynb or CGAN_Approach.ipynb for training VAE and CGAN models, respectively.
+## Hyper Paramter Training: 
+Use the VAE_hyper_parameter_search.ipynb for further hyper paramter tuning using the Tensorboard.
+## start the Tensorboard with logs with 
+
+```
 tensorboard --logdir=logs/hparam_tuning_vae_2
+``` 
 
-Evaluation: Assess model performance using Classifications.ipynb for classification evaluation and K_Level_Analysis.ipynb for privacy analysis
+## Evaluation: 
+Assess model performance using Classifications.ipynb for classification evaluation and K_Level_Analysis.ipynb for privacy analysis
 and Monte_Carlo_Attack.ipynb for the membership inference attack
+With higher number of latent dimensions, the K-Level first decreases and then increases. Yet the F1 Score either has a lower bound or even increases.
+That means with higher number of latent dimensions one might generate higher privacy scores.
 
+![K_Level](/reports/figures/K-Levels.png)
+![F_1](/reports/figures/F1.png)
 
 
 
@@ -77,3 +87,4 @@ notebooks/
 ├── K_Level_Analysis.ipynb # according to Li et al. (2019).
 ├── Monte_Carlo_Attack.ipynb # according to (Hilprecht et al. 2019)
 ├── VAE_hyper_parameter_search.ipynb # grid search for optimal hyperparamters, see also the logs folder
+```plaintext
