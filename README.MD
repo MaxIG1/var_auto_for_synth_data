@@ -1,12 +1,21 @@
 # README
-# Welcome to my approach of recreating tabular data with a VAE
+# Secure Synthetic Data Generation for Fraud Detection: A Generative Model Approach with Privacy Preservation and Class Imbalance Handling
+
+Using generative neural networks, specifically Variational Autoencoders (VAEs), to create synthetic data that mimics sensitive data while preserving privacy. This synthetic data can help in developing better fraud detection models without compromising privacy.
+
+## Motivation 
+
+ A data science company has the problem that they cannot access highly sensitive data due to legal concerns on the customers side. This leads to the problem that no businness relationship can be build, because no algorithm can be trained that depicts the companies capabilites. 
+ Generative models can be a solution to regenerate synthetic data.
 
 
+## Central Findings
 
-
-
-# Central Findings
-This project investigates the use of variational autoencoders (VAEs) to reproduce heavily imbalanced and sensitive data, specifically focusing on credit card fraud data. Key findings include:
+- **VAEs Effectiveness**: VAEs demonstrate proficiency in reproducing data, particularly through the Data-generation process.
+- **Challenges with Imbalance**: Reproducing minority classes poses challenges, but oversampling can mitigate this issue effectively.
+- **Hyperparameter Tuning**: Optimizing hyperparameters enhances model performance, with VAEs showcasing promising results in replicating minority classes post-oversampling.
+- **Comparison with CGANs**: VAEs outperform CGANs in utility scores, especially without oversampling.
+- **Privacy Analysis**: VAE-generated data offers higher privacy levels, especially with increased latent dimensions.
 
 VAEs demonstrate the capability to reproduce data effectively, particularly through the Data-generation process, as can be seen here:
 Green = Original test data; Blue is syntethic data.
@@ -14,38 +23,39 @@ Green = Original test data; Blue is syntethic data.
 Challenges arise in reproducing minority classes, especially through the S-generation process. Yet with oversampling, this is possible as well:
 ![Optimal Model](/reports/figures/optimal_model_sample.png)
 
-Hyperparameter tuning improves model performance, with VAEs showing promising results in replicating minority classes after oversampling.
-
-Comparison with conditional generative adversarial networks (CGANs) suggests VAEs offer better utility scores, especially when oversampling is not an option.
-Privacy analysis indicates VAE-generated data can provide higher privacy levels, particularly with increased latent dimensions.
-Limitations and Further Research
 
 Challenges exist in adapting attacks like the Monte Carlo attack to tabular data, suggesting the need for further research.
 VAEs tend to overlook minority classes, prompting exploration into architectures that better address this issue.
 Understanding the point at which VAEs overfit remains an open question.
 Future research directions include exploring differential privacy, incorporating time dimension with recurrent neural networks, and investigating conditional VAEs.
 
-# Recommendations and Evaluation
-Well-trained VAEs, especially through the D-generation process, offer promising solutions for synthetic data generation.
-Consideration of oversampling and model selection based on use case requirements is crucial.
-VAEs demonstrate potential for synthetic data generation while preserving privacy and providing high utility.
-Usage
+## Recommendations and Evaluation
 
-# Usage
+- Well-trained VAEs, particularly through the D-generation process, offer promising solutions for synthetic data generation.
+- Consideration of oversampling and model selection based on use case requirements is crucial.
+- VAEs demonstrate potential for synthetic data generation while preserving privacy and providing high utility.
 
-## Data Preparation: 
-Refer to data_preparation.ipynb for steps involved in data preprocessing and preparation.
-## Model Training: 
-Utilize notebook Base_updated_data.ipynb or CGAN_Approach.ipynb for training VAE and CGAN models, respectively.
-## Hyper Paramter Training: 
-Use the VAE_hyper_parameter_search.ipynb for further hyper paramter tuning using the Tensorboard.
-## start the Tensorboard with logs with 
+## Usage
+
+### Data Preparation: 
+Refer to `data_preparation.ipynb` for steps involved in data preprocessing and preparation. 
+
+### Model Training: 
+The hyperparameter tuning information is stored in the CSV file: `notebooks\logs\hparam_tuning_vae_2\CSV\hparams_table.csv`.
+Choose one of the optimal architectures.
+Utilize notebook `Base_updated_data.ipynb` or `CGAN_Approach.ipynb` for training VAE and CGAN models, respectively.
+
+### Hyperparameter Training: 
+Use `VAE_hyper_parameter_search.ipynb` for further hyperparameter tuning using Tensorboard.
+
+### Starting Tensorboard with Logs: 
+Start the Tensorboard with logs using the following command:
 
 ```
 tensorboard --logdir=logs/hparam_tuning_vae_2
 ``` 
 
-## Evaluation: 
+### Evaluation: 
 Assess model performance using Classifications.ipynb for classification evaluation and K_Level_Analysis.ipynb for privacy analysis
 and Monte_Carlo_Attack.ipynb for the membership inference attack
 With higher number of latent dimensions, the K-Level first decreases and then increases. Yet the F1 Score either has a lower bound or even increases.
