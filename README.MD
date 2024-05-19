@@ -64,7 +64,7 @@ That means with higher number of latent dimensions one might generate higher pri
 ![K_Level](/reports/figures/K-Levels.png)
 ![F_1](/reports/figures/F1.png)
 
-
+### the following data structure is used, adpted from cookie cutter data science projects
 
 ```plaintext
 data/
