@@ -6,7 +6,7 @@ Using generative neural networks, specifically Variational Autoencoders (VAEs), 
 ## Motivation 
 
  A data science company has the problem that they cannot access highly sensitive data due to legal concerns on the customers side. This leads to the problem that no businness relationship can be build, because no algorithm can be trained that depicts the companies capabilites. 
- Generative models can be a solution to regenerate synthetic data.
+ Generative models emerge as a potential remedy by allowing for the generation of synthetic data. Notably, synthetic data, is anonymous in a legal sense, serves as a viable solution for the secure exchange of sensitive data.
 
 
 ## Central Findings
