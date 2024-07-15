@@ -79,6 +79,7 @@ target/
 /data/interim/old
 /data/interim/privacy_testing/K_Level_data/non_over_sampled
 /data/interim/privacy_testing/Monte_Carlo_Attack_Data/Non_Used_files
+/data/raw
 # exclude other folders and stuff I dont want uploaded
 /notebooks/var_auto_pip
 /notebooks/Archive/
